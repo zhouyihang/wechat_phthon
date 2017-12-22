@@ -1,6 +1,6 @@
 #coding:utf-8
 
-from api_handler import *
+from Handlers.api_handler import *
 
 TOKEN = 'weixin'
 def onText(wxmsg):
