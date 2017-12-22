@@ -1,10 +1,8 @@
-from flask import Flask
-app = Flask(__name__)
+#import WeiXinCore.WeiXin
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+from FlaskApp import app
 
-import FlaskApp.views
-from WeiXinCore.WeiXin import echo
-try:
-    import sae
-    import FlaskApp.sae_py
-except:
-    print("no in sae.")
+
+app.run(debug=True,port=5000)
