@@ -5,7 +5,7 @@ session, make_response, jsonify
 
 
 app = Flask(__name__)
-app.config.from_pyfile('flaskapp.cfg')
+#app.config.from_pyfile('flaskapp.cfg')
 from constants import MYSQL_URI
 app.config['SQLALCHEMY_DATABASE_URI'] = MYSQL_URI
 
