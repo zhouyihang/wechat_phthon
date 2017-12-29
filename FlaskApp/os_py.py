@@ -17,7 +17,3 @@ def greeting():
     html = ''
 
     return html
-
-@app.route('/')
-def index():
-    return 'Hello World!'
