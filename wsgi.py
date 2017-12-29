@@ -4,9 +4,6 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     return "Hello World!"
-
-if __name__ == "__main__":
-    application.run()
     
 from WeiXinCore.WeiXin import echo
 
@@ -21,3 +18,6 @@ def greeting():
     html = ''
 
     return html
+
+if __name__ == "__main__":
+    application.run()
