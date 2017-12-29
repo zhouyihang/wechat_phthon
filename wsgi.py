@@ -4,5 +4,5 @@
 #sys.setdefaultencoding('utf-8')
 from FlaskApp import app
 
-
-app.run()
+if __name__ == "__main__":
+    app.run()
