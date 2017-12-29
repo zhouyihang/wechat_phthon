@@ -2,6 +2,6 @@
 #import sys
 #reload(sys)
 #sys.setdefaultencoding('utf-8')
-from FlaskApp import app
+from FlaskApp import app, os_py
 
-app.run()
+#app.run()
