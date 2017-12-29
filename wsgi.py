@@ -1,7 +1,23 @@
-#import WeiXinCore.WeiXin
-#import sys
-#reload(sys)
-#sys.setdefaultencoding('utf-8')
-from FlaskApp import app, os_py
+from flask import Flask
+app = Flask(__name__)
 
-#app.run()
+@app.route("/")
+def hello():
+    return "Hello World!"
+
+if __name__ == "__main__":
+    application.run()
+    
+from WeiXinCore.WeiXin import echo
+
+from flask import Flask, g, request
+
+@app.route('/douban', methods=['GET', 'POST'])
+def douban():
+    return str( dict(request.args))
+  
+@app.route('/fankui', methods=['GET', 'POST'])
+def greeting():
+    html = ''
+
+    return html
