@@ -18,8 +18,10 @@
 #    html = ''
 #
 #    return html
-
-from FlaskApp import app, os_py
-
-if __name__ == "__main__":
-    application.run()
+############
+#from FlaskApp import app, os_py
+#
+#if __name__ == "__main__":
+#    application.run()
+############
+from FlaskApp import app as application
