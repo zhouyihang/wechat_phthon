@@ -5,6 +5,7 @@ import FlaskApp.views
 from WeiXinCore.WeiXin import echo
 #try:
 #import os
-import FlaskApp.flaskapp
+#import FlaskApp.flaskapp
+import FlaskApp.os_py
 #except:
 #    print("no in os.")
