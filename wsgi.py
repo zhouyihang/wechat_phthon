@@ -1,11 +1,8 @@
-import os
-from flask import Flask
+#import WeiXinCore.WeiXin
+#import sys
+#reload(sys)
+#sys.setdefaultencoding('utf-8')
+from FlaskApp import app
 
-application = Flask(__name__)
 
-@application.route('/')
-def root():
-    return("Hello there")
-
-if __name__ == "__main__":
-    application.run()
+app.run(debug=True,port=5000)
