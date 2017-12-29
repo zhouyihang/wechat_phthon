@@ -3,7 +3,7 @@ import os
 from flask import Flask, g, request
 from FlaskApp import  app
 #app = Flask(__name__)
-app.debug = True
+#app.debug = True
 
 @app.route('/douban', methods=['GET', 'POST'])
 def douban():
