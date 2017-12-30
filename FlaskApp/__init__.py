@@ -1,7 +1,7 @@
 from flask import Flask
 app = Flask(__name__)
 
-import FlaskApp.views
+#import FlaskApp.views
 #from WeiXinCore.WeiXin import echo
 #try:
 #import os
