@@ -158,7 +158,7 @@ def wechat():
 
 	if request.method=='GET':
 
-		token='自己的'
+		token='weixin'
 
 		data=request.args
 
