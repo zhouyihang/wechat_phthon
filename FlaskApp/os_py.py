@@ -1,3 +1,4 @@
+from FlaskApp import app
 import time
 
 import urllib2
