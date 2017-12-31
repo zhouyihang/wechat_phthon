@@ -1,13 +1,35 @@
+import time
 
-		return ''
+import urllib2
+
+from flask import Flask,g,request,make_response
+
+import hashlib
+
+import xml.etree.ElementTree as ET
+
+import json
+
+import random
+
+import re
+
+import urllib
+
+import sys
+
+import pylibmc
+
+
+
+
+def youdao(word):
+		return u'youdao'
 
 
 
 def joke():
-
-	
-
-		return ''
+		return u'joke'
 
 		
 
@@ -15,9 +37,7 @@ def joke():
 
 def weather(city_name):
 
-	
-
-	return ''
+	return u'weather'
 
 
 
