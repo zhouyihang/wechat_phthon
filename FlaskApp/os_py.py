@@ -18,7 +18,7 @@ import urllib
 
 import sys
 
-import pylibmc
+#import pylibmc
 
 
 
