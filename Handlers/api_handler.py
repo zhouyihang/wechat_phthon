@@ -8,9 +8,9 @@ from WeiXinCore.WeiXinMsg import *
 
 
 def getJson(url):
-    request = urllib2.Request(url)
+    request = urllib.Request(url)
     request.add_header('Accept-encoding', 'gzip')
-    opener = urllib2.build_opener()
+    opener = urllib.build_opener()
     response = opener.open(request)
     html = response.read()#.decode('gbk').encode('utf-8')
     gzipped = response.headers.get('Content-Encoding')
