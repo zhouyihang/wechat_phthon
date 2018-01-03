@@ -2,7 +2,7 @@
 import json
 import urllib2
 import zlib
-#from urllib import *
+from urllib import *
 
 from WeiXinCore.WeiXinMsg import *
 
