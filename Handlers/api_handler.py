@@ -1,8 +1,8 @@
 #coding:utf-8
 import json
-import urllib
+import urllib.request
 import zlib
-from urllib import *
+#from urllib import *
 
 from WeiXinCore.WeiXinMsg import *
 
@@ -10,7 +10,7 @@ from WeiXinCore.WeiXinMsg import *
 def getJson(url):
     request = urllib.Request(url)
     request.add_header('Accept-encoding', 'gzip')
-    opener = urllib.build_opener()
+    opener = request.build_opener()
     response = opener.open(request)
     html = response.read()#.decode('gbk').encode('utf-8')
     gzipped = response.headers.get('Content-Encoding')
