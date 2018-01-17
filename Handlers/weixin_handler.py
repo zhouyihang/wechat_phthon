@@ -51,7 +51,7 @@ def onImage(wxmsg):
 	MediaId	图片消息媒体id，可以调用多媒体文件下载接口拉取数据。'''
     #return wxmsg.resp_music('Sorry','对不起，我还识别不了，来听首歌吧。',r'http://7s1r1i.com1.z0.glb.clouddn.com/小皮%20-%20村庄.mp3','')
 	ocr = Youtu(youtu_app_id, youtu_secret_id, youtu_secret_key, youtu_qq)
-	resp = ocr.get_text('3.png')
+	resp = ocr.get_text(wxmsg.PicUrl)
     return wxmsg.resp_text(resp)
 
 def onVoice(wxmsg): 
