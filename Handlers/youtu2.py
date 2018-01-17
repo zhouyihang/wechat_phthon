@@ -12,6 +12,10 @@ import base64
 import requests
 import json
 
+youtu_app_id = os.environ['OPENSHIFT_ENV_YOUTU_APP_ID']
+youtu_secret_id = os.environ['OPENSHIFT_ENV_YOUTU_SECRET_ID']
+youtu_secret_key = os.environ['OPENSHIFT_ENV_YOUTU_SECRET_KEY']
+youtu_qq = os.environ['OPENSHIFT_ENV_YOUTU_QQ']
 
 def cal_sig():
     timestamp = int(time.time())
