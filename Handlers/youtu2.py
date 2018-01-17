@@ -45,8 +45,9 @@ def youtu_get_text(image_url):
     resptext = ''
     if 'items' in resp.text:
         ###return resp.content.decode('utf-8')
-        for itemstring in items:
-			resptext = resptext + itemstring.decode('utf-8')
+	parsed_resp = json.loads(resp)
+        for itemstring in parsed_resp['items']:
+		resptext = resptext + itemstring.decode('utf-8')
 	return resptext
     else:
         return '0'
