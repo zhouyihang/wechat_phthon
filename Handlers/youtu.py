@@ -15,7 +15,7 @@ import json
 
 class Youtu(object):
 
-    def __init__(self, app_id, secret_id, secret_key, qq=10000):
+    def __init__(self, app_id, secret_id, secret_key, qq):
         self.app_id = app_id
         self.secret_id = secret_id
         self.secret_key = secret_key
