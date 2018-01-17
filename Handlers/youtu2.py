@@ -29,7 +29,7 @@ def cal_sig():
     signature = base64.b64encode(s).rstrip().decode()
     return signature
 
-def get_text(image_path):
+def youtu_get_text(image_path):
     signature = cal_sig()
     headers = {'Host': 'api.youtu.qq.com', 'Content-Type': 'text/json', 'Authorization': signature}
     filepath = os.path.abspath(image_path)
