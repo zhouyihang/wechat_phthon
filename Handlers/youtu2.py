@@ -42,12 +42,12 @@ def youtu_get_text(image_url):
     resp = requests.post('https://api.youtu.qq.com/youtu/ocrapi/generalocr',
                          data=json.dumps(data),
                          headers=headers)
-    resptext = ''
+    resptext = u' '
     if 'items' in resp.text:
         ###return resp.content.decode('utf-8')
 	parsed_resp = json.loads(resp.content.decode('utf-8'))
         for itemstring in parsed_resp['items']:
-		resptext = resptext + str(itemstring)
-	return u' '+resptext
+		resptext = resptext + str(itemstring).decode('utf-8')
+	return resptext
     else:
         return '0'
