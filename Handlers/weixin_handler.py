@@ -1,7 +1,7 @@
 #coding:utf-8
 
 from Handlers.api_handler import *
-from Handlers.youtu import *
+from Handlers.youtu2 import *
 
 TOKEN = 'weixin'
 def onText(wxmsg):
@@ -50,9 +50,7 @@ def onImage(wxmsg):
     PicUrl	图片链接
 	MediaId	图片消息媒体id，可以调用多媒体文件下载接口拉取数据。'''
     #return wxmsg.resp_music('Sorry','对不起，我还识别不了，来听首歌吧。',r'http://7s1r1i.com1.z0.glb.clouddn.com/小皮%20-%20村庄.mp3','')
-	ocr = Youtu(youtu_app_id, youtu_secret_id, youtu_secret_key, youtu_qq)
-	resp = ocr.get_text(wxmsg.PicUrl)
-    return wxmsg.resp_text(resp)
+    return wxmsg.resp_text(youtu_get_text(wxmsg.PicUrl))
 
 def onVoice(wxmsg): 
     '''收到语音
