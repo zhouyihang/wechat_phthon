@@ -33,12 +33,12 @@ def cal_sig():
     signature = base64.b64encode(s).rstrip().decode()
     return signature
 
-def youtu_get_text(image_path):
+def youtu_get_text(image_url):
     signature = cal_sig()
     headers = {'Host': 'api.youtu.qq.com', 'Content-Type': 'text/json', 'Authorization': signature}
     ##filepath = os.path.abspath(image_path)
-    data = {'app_id': youtu_app_id, 'image': ''}
-    data['image'] = base64.b64encode(open(image_path, 'rb').read()).rstrip().decode('utf-8')
+    data = {'app_id': youtu_app_id, 'url': image_url}
+    ##data['image'] = base64.b64encode(open(image_path, 'rb').read()).rstrip().decode('utf-8')
     resp = requests.post('https://api.youtu.qq.com/youtu/ocrapi/generalocr',
                          data=json.dumps(data),
                          headers=headers)
