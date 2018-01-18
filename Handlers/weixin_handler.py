@@ -16,7 +16,8 @@ def onText(wxmsg):
         return wxmsg.resp_text(u'''通过发送以下列字符开头的消息可查询相关信息：
 fy  翻译（来自有道）
 dy  电影（来自豆瓣）
-无前缀默认为查询电影''')
+无前缀默认为查询电影
+或者发图片我们帮你转成文字''')
         
     # elif inTxt.startswith('!') or inTxt.startswith(u'！'):
     #     c = g.db.cursor()
