@@ -58,7 +58,8 @@ def onVoice(wxmsg):
     MediaId	语音消息媒体id，可以调用多媒体文件下载接口拉取数据。
 	Format	语音格式，如amr，speex等
 	Recognition为语音识别结果'''
-    return wxmsg.resp_text(wxmsg.Recognition if wxmsg.Recognition is not 'None' else u"没听懂……")
+    ###return wxmsg.resp_text(wxmsg.Recognition if wxmsg.Recognition is not 'None' else u"没听懂……")
+    return wxmsg.resp_text(youdao(wxmsg.Recognition) if wxmsg.Recognition is not 'None' else u"没听懂……")
 
 def onVideo(wxmsg):
     '''收到视频
