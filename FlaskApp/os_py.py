@@ -1,8 +1,8 @@
 from FlaskApp import app
 import time
 
-import urllib2
-
+##import urllib2
+##
 from flask import Flask,g,request,make_response
 
 import hashlib
