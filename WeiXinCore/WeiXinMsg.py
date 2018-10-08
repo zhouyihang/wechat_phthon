@@ -37,23 +37,23 @@ class WeiXinMsg(object):
         self.FromUserName = self.j['ToUserName']
         self.MsgType = self.j['MsgType']
         
-        self.MsgId = self.j['MsgId'] if self.j.has_key('MsgId') else ''
-        self.Content = self.j['Content'] if self.j.has_key('Content') else ''
-        self.PicUrl = self.j['PicUrl'] if self.j.has_key('PicUrl') else ''
-        self.MediaId = self.j['MediaId'] if self.j.has_key('MediaId') else ''
-        self.Recognition = self.j['Recognition'] if self.j.has_key('Recognition') else ''
-        self.Format = self.j['Format'] if self.j.has_key('Format') else ''
-        self.ThumbMediaId = self.j['ThumbMediaId'] if self.j.has_key('ThumbMediaId') else ''
-        self.Location_X = self.j['Location_X'] if self.j.has_key('Location_X') else ''
-        self.Location_Y = self.j['Location_Y'] if self.j.has_key('Location_Y') else ''
-        self.Scale = self.j['Scale'] if self.j.has_key('Scale') else ''
-        self.Label = self.j['Label'] if self.j.has_key('Label') else ''
-        self.Title = self.j['Title'] if self.j.has_key('Title') else ''
-        self.Description = self.j['Description'] if self.j.has_key('Description') else ''
-        self.Url = self.j['Url'] if self.j.has_key('Url') else ''
-        self.EventKey = self.j['EventKey'] if self.j.has_key('EventKey') else ''
-        self.Event = self.j['Event'].lower() if self.j.has_key('Event') else ''
-        self.Ticket = self.j['Ticket'].lower() if self.j.has_key('Ticket') else ''
+        self.MsgId = self.j['MsgId'] if 'MsgId' in self.j else ''
+        self.Content = self.j['Content'] if 'Content' in self.j else ''
+        self.PicUrl = self.j['PicUrl'] if 'PicUrl' in self.j else ''
+        self.MediaId = self.j['MediaId'] if 'MediaId' in self.j else ''
+        self.Recognition = self.j['Recognition'] if 'Recognition' in self.j else ''
+        self.Format = self.j['Format'] if 'Format' in self.j else ''
+        self.ThumbMediaId = self.j['ThumbMediaId'] if 'ThumbMediaId' in self.j else ''
+        self.Location_X = self.j['Location_X'] if 'Location_X' in self.j else ''
+        self.Location_Y = self.j['Location_Y'] if 'Location_Y' in self.j else ''
+        self.Scale = self.j['Scale'] if 'Scale' in self.j else ''
+        self.Label = self.j['Label'] if 'Label' in self.j else ''
+        self.Title = self.j['Title'] if 'Title' in self.j else ''
+        self.Description = self.j['Description'] if 'Description' in self.j else ''
+        self.Url = self.j['Url'] if 'Url' in self.j else ''
+        self.EventKey = self.j['EventKey'] if 'EventKey' in self.j else ''
+        self.Event = self.j['Event'].lower() if 'Event' in self.j else ''
+        self.Ticket = self.j['Ticket'].lower() if 'Ticket' in self.j else ''
 
 # # ToUserName  开发者微信号
 # # FromUserName    发送方帐号（一个OpenID）
@@ -80,7 +80,7 @@ class WeiXinMsg(object):
 
 
     def __getitem__(self,name):
-        return self.j[name] if self.j.has_key(name) else ''
+        return self.j[name] if name in self.j else ''
 
             
     def resp_text(self,text,funcFlag=0):
