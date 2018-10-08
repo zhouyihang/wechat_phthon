@@ -23,6 +23,7 @@ def getJson(url):
     webUrl = urlopen(url)
     data = webURL.read()
     encoding = webURL.info().get_content_charset('utf-8')
+    print(data.decode(encoding))
     return json.loads(data.decode(encoding))
 
 def youdao(text):
