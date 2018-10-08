@@ -12,7 +12,6 @@ import hashlib
 from Handlers.weixin_handler import *
 #from index import app
 #from WeiXin.weixin_handler import *
-TOKEN = 'weixin'
 
 EventType ={
     "subscribe":onSubscribe,
@@ -54,22 +53,10 @@ def check_signature(request_args):
 from FlaskApp import app
 @app.route('/wx', methods = ['GET', 'POST'] )
 def echo():
-    signature = request.args.get('signature', '')
-    timestamp = request.args.get('timestamp', '')
-    nonce = request.args.get('nonce', '')
-    echo_str = request.args.get('echostr', '')
-    encrypt_type = request.args.get('encrypt_type', '')
-    msg_signature = request.args.get('msg_signature', '')
-
+    signature = flask.request.args.get('signature', '')
     print('signature:', signature)
-    print('timestamp: ', timestamp)
-    print('nonce:', nonce)
-    print('echo_str:', echo_str)
-    print('encrypt_type:', encrypt_type)
-    print('msg_signature:', msg_signature)
 
-    ##if not app.debug and not check_signature(request.args):
-    if not app.debug and not check_signature(TOKEN, signature, timestamp, nonce):
+    if not app.debug and not check_signature(flask.request.args):
         #不在Debug模式下，则需要验证。
         return ""
     if request.method == 'GET':
