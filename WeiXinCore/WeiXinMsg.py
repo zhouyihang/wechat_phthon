@@ -29,7 +29,7 @@ class WeiXinMsg(object):
         self.j={}
         for child in root:
             if child.tag == 'CreateTime':
-                value = long(child.text)
+                value = int(child.text)
             else:
                 value = child.text
             self.j[child.tag] = value
