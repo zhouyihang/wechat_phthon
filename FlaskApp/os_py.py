@@ -68,7 +68,7 @@ def wechat():
 
 		s=''.join(s)
 
-		if(hashlib.sha1(s).hexdigest()==signature):
+		if(hashlib.sha1(s.encode('utf-8')).hexdigest()==signature):
 
 			return make_response(echostr)
 
