@@ -4,7 +4,7 @@ import json
 import zlib
 #from urllib import *
 import urllib.request
-import urllib.parse.quote_plus
+from urllib.parse import quote_plus
 
 from WeiXinCore.WeiXinMsg import *
 
