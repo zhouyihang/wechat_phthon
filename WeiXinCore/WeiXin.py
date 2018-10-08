@@ -53,10 +53,7 @@ def check_signature(request_args):
 from FlaskApp import app
 @app.route('/wx', methods = ['GET', 'POST'] )
 def echo():
-    signature = flask.request.args.get('signature', '')
-    print('signature:', signature)
-
-    if not app.debug and not check_signature(flask.request.args):
+    if not app.debug and not check_signature(request.args):
         #不在Debug模式下，则需要验证。
         return ""
     if request.method == 'GET':
